@@ -7,7 +7,7 @@
 
 ### Node configuration
 
-`~/.novo-bitcoin/novo.conf` example:
+`~/.novo/novo.conf` example:
 
 ```
 port=8666
@@ -18,11 +18,11 @@ rpcpassword=PASSWORD
 
 ### Start node
 
-    $ novobitcoind -daemon
+    $ novod -daemon
 
 ### Stop node
 
-    $ novobitcoin-cli stop
+    $ novo-cli stop
 
 ## Miner
 
@@ -41,26 +41,26 @@ rpcpassword=PASSWORD
     "pass" : "PASSWORD",
     "algo" : "sha256dt",
     "threads" : "1",
-    "coinbase-addr": "BITCOIN_ADDRESS"
+    "coinbase-addr": "NOVO_ADDRESS"
 }
 ```
 
-**BITCOIN_ADDRESS**:
+**NOVO_ADDRESS**:
 
-    $ novobitcoin-cli getnewaddress
-    1NBCnKZ93kSaXxiHzXQV4iqUSH4iRSDPmF
+    $ novo-cli getnewaddress
+    1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa
 
 ### Start miner
 
     $ novominer -c cfg.json
 
-## Novo Bitcoin wallet
+## Novo wallet
 
-    $ novobitcoin-cli getbalance
+    $ novo-cli getbalance
     100.0000
 
-    $ novobitcoin-cli sendtoaddress 1NBCnKZ93kSaXxiHzXQV4iqUSH4iRSDPmF 10.0000
+    $ novo-cli sendtoaddress 1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa 10.0000
 
 ## Docker
 
-    $ docker build -t novo-bitcoin:0.1.0 .
+    $ docker build -t novo:0.1.2 .
