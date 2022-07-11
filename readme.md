@@ -63,4 +63,4 @@ rpcpassword=PASSWORD
 
 ## Docker
 
-    $ docker build -t novo:0.1.2 .
+    $ docker build -t novo:0.2.0 .
